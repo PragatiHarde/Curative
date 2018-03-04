@@ -1,116 +1,130 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 
-
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="fill_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    >
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
+    <!--col 1 row 1-->
+    <android.support.v7.widget.CardView
+        android:layout_width="168dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="64dp"
+        android:elevation="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-  <!--  tools:context="com.example.rucha.curative.MainActivity" >  -->
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="5dp">
 
-
-    <GridLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_alignParentBottom="true"
-        android:columnCount="2"
-        android:padding="20dp"
-        android:rowCount="2"
-        >
-
-        <!--col 1 row 1-->
-
-
-            <RelativeLayout
-
+            <ImageView
+                android:id="@+id/records_image"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal|center_vertical"
-                android:layout_margin="10dp">
+                android:layout_gravity="center"
+                android:src="@drawable/grid_records" />
 
-                <ImageView
-                    android:id="@+id/records_image"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:src="@drawable/grid_records" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/records_image"
-                    android:text="@string/Records_button"
-                    android:textAlignment="center"
-                    android:textStyle="bold"
-                    android:textColor="@color/colorFontMain"
-                    android:textSize="13sp" />
-            </RelativeLayout>
-
-
-
-        <!--col 2 row 1-->
-
-
-            <RelativeLayout
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal|center_vertical"
-                android:layout_margin="10dp">
-
-                <ImageView
-                    android:id="@+id/vets_image"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:src="@drawable/grid_vets" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/vets_image"
-                    android:text="@string/Vets_button"
-                    android:textStyle="bold"
-                    android:layout_centerInParent="true"
-                    android:textColor="@color/colorFontMain"
-                    android:textSize="13sp" />
-            </RelativeLayout>
+                android:layout_below="@id/records_image"
+                android:text="@string/Records_button"
+                android:textAlignment="center"
+                android:textColor="@color/colorFontMain"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
 
 
+    <!--col 2 row 1-->
+    <android.support.v7.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="64dp"
+        android:elevation="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-        <!--col 1 row 2-->
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="5dp"
+            tools:layout_editor_absoluteX="189dp"
+            tools:layout_editor_absoluteY="10dp">
 
-
-            <RelativeLayout
+            <ImageView
+                android:id="@+id/vets_image"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal|center_vertical"
-                android:layout_margin="16dp"
-                android:layout_columnSpan="2">
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/grid_vets"
+                tools:layout_editor_absoluteX="188dp"
+                tools:layout_editor_absoluteY="11dp" />
 
-                <ImageView
-                    android:id="@+id/diagnose_image"
-                    android:layout_width="300dp"
-                    android:layout_height="190dp"
-                    android:layout_gravity="center_horizontal"
-                    android:src="@drawable/grid_diagnose"
-                    android:padding="@dimen/activity_horizontal_margin"
-                   />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/vets_image"
+                android:layout_centerInParent="true"
+                android:text="@string/Vets_button"
+                android:textColor="@color/colorFontMain"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/diagnose_image"
-                    android:text="@string/Diagnose_button"
-                    android:layout_centerInParent="true"
-                    android:textStyle="bold"
-                    android:textColor="@color/colorFontMain"
-                    android:textSize="15sp" />
-            </RelativeLayout>
 
-    </GridLayout>
-</RelativeLayout>
+    <!--col 1 row 2-->
+    <android.support.v7.widget.CardView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="64dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:elevation="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="5dp"
+            tools:layout_editor_absoluteX="72dp"
+            tools:layout_editor_absoluteY="222dp">
+
+            <ImageView
+                android:id="@+id/diagnose_image"
+                android:layout_width="180dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/grid_diagnose"
+                tools:layout_editor_absoluteX="12dp"
+                tools:layout_editor_absoluteY="0dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/diagnose_image"
+                android:layout_centerInParent="true"
+                android:text="@string/Diagnose_button"
+                android:textColor="@color/colorFontMain"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+
+</android.support.constraint.ConstraintLayout>
