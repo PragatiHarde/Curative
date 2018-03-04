@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#EF6C00</color>
+    <color name="colorBg">#F9FBE7</color>
+    <color name="colorPrimaryDark">#E65100</color>
+    <color name="colorSecondary">#212121</color>
+    <color name="colorAccent">#CE93D8</color>
+    <color name="colorFontMain">#6A1B9A</color>
+    <color name="colorDiagnoseButton">#43A047</color>
+</resources>

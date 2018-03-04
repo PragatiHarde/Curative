@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+
+  <!--  tools:context="com.example.rucha.curative.MainActivity" >  -->
+
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:columnCount="2"
+        android:padding="20dp"
+        android:rowCount="2"
+        >
+
+        <!--col 1 row 1-->
+
+
+            <RelativeLayout
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:layout_margin="10dp">
+
+                <ImageView
+                    android:id="@+id/records_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@drawable/grid_records" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/records_image"
+                    android:text="@string/Records_button"
+                    android:textAlignment="center"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorFontMain"
+                    android:textSize="13sp" />
+            </RelativeLayout>
+
+
+
+        <!--col 2 row 1-->
+
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:layout_margin="10dp">
+
+                <ImageView
+                    android:id="@+id/vets_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@drawable/grid_vets" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/vets_image"
+                    android:text="@string/Vets_button"
+                    android:textStyle="bold"
+                    android:layout_centerInParent="true"
+                    android:textColor="@color/colorFontMain"
+                    android:textSize="13sp" />
+            </RelativeLayout>
+
+
+
+        <!--col 1 row 2-->
+
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:layout_margin="16dp"
+                android:layout_columnSpan="2">
+
+                <ImageView
+                    android:id="@+id/diagnose_image"
+                    android:layout_width="300dp"
+                    android:layout_height="190dp"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@drawable/grid_diagnose"
+                    android:padding="@dimen/activity_horizontal_margin"
+                   />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/diagnose_image"
+                    android:text="@string/Diagnose_button"
+                    android:layout_centerInParent="true"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorFontMain"
+                    android:textSize="15sp" />
+            </RelativeLayout>
+
+    </GridLayout>
+</RelativeLayout>
