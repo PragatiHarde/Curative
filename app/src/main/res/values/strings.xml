@@ -8,4 +8,6 @@
     <string name="Records_button">My Companions\' Records</string>
     <string name="Vets_button">My Vets</string>
     <string name="action_settings">Settings</string>
+    <string name="title_activity_companion_profile">companion_profile</string>
+
 </resources>

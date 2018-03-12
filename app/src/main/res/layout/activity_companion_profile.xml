@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:theme="@style/Theme.AppCompat.Light.DarkActionBar"
+    tools:context=".companion_profile"
+    >
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:fitsSystemWindows="true">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/com_profile_collapsingToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/collapsing_toolbar_height"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            app:contentScrim="@color/colorPrimaryLight"
+            android:fitsSystemWindows="true" >
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/collapsing_toolbar_height"
+                android:scaleType="centerCrop"
+                android:src="@drawable/sample_image"
+                app:layout_collapseMode="parallax"
+
+                />
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/com_profile_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="pin"
+                >
+
+            </android.support.v7.widget.Toolbar>
+
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:context="com.example.rucha.curative.companion_profile"
+        >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <android.support.v7.widget.CardView
+                android:id="@+id/com_profile_card1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/activity_horizontal_margin"
+                app:cardElevation="@dimen/cardview_default_elevation"
+                app:cardUseCompatPadding="true">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/activity_vertical_margin"
+                    android:paddingRight="@dimen/activity_vertical_margin">
+
+                    <TextView
+                        android:id="@+id/com_profile_breed"
+                        android:layout_width="@dimen/textview_width"
+                        android:layout_height="@dimen/textview_height"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:textColor="@color/colorSecondaryDark"
+                        android:text="Breed:" />
+
+                    <AutoCompleteTextView
+                        android:id="@+id/com_profile_editbreed"
+                        style="@style/Widget.AppCompat.AutoCompleteTextView"
+                        android:layout_width="@dimen/edittext_width1"
+                        android:layout_height="@dimen/textview_height"
+                        android:layout_toEndOf="@id/com_profile_breed"
+                        android:inputType="text"
+                        android:maxLines="1" />
+
+
+
+                    <TextView
+                        android:id="@+id/com_profile_sex"
+                        android:layout_below="@id/com_profile_breed"
+                        android:layout_width="@dimen/textview_width"
+                        android:layout_height="@dimen/textview_height"
+                        android:layout_alignParentStart="true"
+                        android:textColor="@color/colorSecondaryDark"
+                        android:text="Sex:" />
+
+                    <AutoCompleteTextView
+                        android:id="@+id/com_profile_editsex"
+                        android:layout_width="@dimen/edittext_width2"
+                        android:layout_height="@dimen/textview_height"
+                        android:layout_below="@id/com_profile_editbreed"
+                        android:layout_toEndOf="@+id/com_profile_breed"
+                        android:inputType="text"
+                        android:maxLines="1"/>
+
+
+                    <TextView
+                        android:id="@+id/com_profile_bloodgrp"
+                        android:layout_width="@dimen/textview_width"
+                        android:layout_height="@dimen/textview_height"
+                        android:layout_alignStart="@+id/com_profile_age"
+                        android:layout_below="@+id/com_profile_editbreed"
+                        android:textColor="@color/colorSecondaryDark"
+                        android:text="Blood grp::" />
+
+                    <EditText
+                        android:id="@+id/com_profile_editbloodgrp"
+                        android:layout_width="@dimen/edittext_width2"
+                        android:layout_height="@dimen/textview_height"
+                        android:layout_alignEnd="@+id/com_profile_editbreed"
+                        android:layout_alignParentEnd="true"
+                        android:layout_below="@+id/com_profile_editbreed"
+                        android:inputType="text"
+                        android:maxLines="1"/>
+
+
+
+                    <TextView
+                        android:id="@+id/com_profile_dob"
+                        android:layout_below="@id/com_profile_sex"
+                        android:layout_width="@dimen/textview_width"
+                        android:layout_height="@dimen/textview_height"
+                        android:layout_alignParentStart="true"
+                        android:textColor="@color/colorSecondaryDark"
+                        android:text="DOB:"
+                        />
+
+                    <EditText
+                        android:id="@+id/com_profile_editdob"
+                        android:layout_width="@dimen/edittext_width2"
+                        android:layout_height="@dimen/textview_height"
+                        android:layout_below="@+id/com_profile_sex"
+                        android:layout_toEndOf="@+id/com_profile_dob"
+                        android:inputType="date"
+                        android:maxLines="1"/>
+
+
+                    <TextView
+                        android:id="@+id/com_profile_age"
+                        android:layout_width="@dimen/textview_width"
+                        android:layout_height="@dimen/textview_height"
+                        android:layout_below="@+id/com_profile_bloodgrp"
+                        android:layout_toStartOf="@+id/com_profile_editage"
+                        android:textColor="@color/colorSecondaryDark"
+                        android:text="Age:" />
+
+                    <EditText
+                        android:id="@+id/com_profile_editage"
+                        android:layout_width="@dimen/edittext_width2"
+                        android:layout_height="@dimen/textview_height"
+                        android:layout_alignStart="@+id/com_profile_editbloodgrp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_below="@+id/com_profile_editbloodgrp"
+                        android:maxLines="1"
+                        android:inputType="number" />
+
+
+
+                    <TextView
+                        android:id="@+id/com_profile_ht"
+                        android:layout_below="@id/com_profile_dob"
+                        android:layout_width="@dimen/textview_width"
+                        android:layout_height="@dimen/textview_height"
+                        android:layout_alignParentStart="true"
+                        android:textColor="@color/colorSecondaryDark"
+                        android:text="Ht:" />
+
+                    <EditText
+                        android:id="@+id/com_profile_editht"
+                        android:layout_width="@dimen/edittext_width2"
+                        android:layout_height="@dimen/textview_height"
+                        android:layout_alignParentBottom="true"
+                        android:layout_toEndOf="@+id/com_profile_dob"
+                        android:inputType="text"
+                        android:maxLines="1"/>
+
+
+                    <TextView
+                        android:id="@+id/com_profile_wt"
+                        android:layout_width="@dimen/textview_width"
+                        android:layout_height="@dimen/textview_height"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignStart="@+id/com_profile_age"
+                        android:textColor="@color/colorSecondaryDark"
+                        android:text="Wt:" />
+
+                    <EditText
+                        android:id="@+id/com_profile_editwt"
+                        android:layout_width="@dimen/edittext_width2"
+                        android:layout_height="@dimen/textview_height"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_toEndOf="@+id/com_profile_wt"
+                        android:inputType="text"
+                        android:maxLines="1"
+                        />
+
+                    <Button
+                        android:id="@+id/com_profile_button"
+                        style="@android:style/Widget.Material.Light.Button.Borderless.Colored"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_toEndOf="@+id/com_profile_editbreed"
+                        android:background="@color/colorPrimaryLight"
+                        android:text="..."
+                        android:textColor="@color/colorWhite" />
+
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/com_profile_card2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/activity_horizontal_margin"
+                app:cardElevation="@dimen/cardview_default_elevation"
+                app:cardUseCompatPadding="true">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/com_profile_vet"
+                        android:layout_width="@dimen/textview_width"
+                        android:layout_height="@dimen/textview_height"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:text="Vet:"
+                        android:textColor="@color/colorSecondaryDark" />
+
+                    <EditText
+                        android:id="@+id/com_profile_editvet"
+                        android:layout_width="@dimen/edittext_width1"
+                        android:layout_height="@dimen/textview_height"
+                        android:layout_toEndOf="@id/com_profile_vet"
+                        android:inputType="text"
+                        android:maxLines="1" />
+
+                    <TextView
+                        android:id="@+id/com_profile_history"
+                        android:layout_width="@dimen/edittext_width1"
+                        android:layout_height="@dimen/textview_height"
+                        android:layout_alignParentStart="true"
+                        android:layout_below="@+id/com_profile_vet"
+                        android:text="History:"
+                        android:textColor="@color/colorSecondaryDark" />
+
+                    <EditText
+                        android:id="@+id/com_profile_edithistory"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/com_profile_history"
+                        android:layout_centerHorizontal="true"
+                        android:background="@color/colorbg_grey"
+                        android:inputType="textMultiLine"
+                        android:lines="3"
+                        android:maxLines="7"
+                        android:scrollbarDefaultDelayBeforeFade="3000"
+                        android:scrollbars="vertical" />
+
+
+                    <TextView
+                        android:id="@+id/com_profile_notes"
+                        android:layout_width="@dimen/textview_width"
+                        android:layout_height="@dimen/textview_height"
+                        android:layout_alignParentStart="true"
+                        android:layout_below="@id/com_profile_edithistory"
+                        android:text="Notes:"
+                        android:textColor="@color/colorSecondaryDark" />
+
+
+                    <EditText
+                        android:id="@+id/com_profile_editnotes"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/com_profile_notes"
+                        android:background="@color/colorbg_grey"
+                        android:inputType="textMultiLine"
+                        android:lines="5"
+                        android:maxLines="20"
+                        android:scrollbarDefaultDelayBeforeFade="3000"
+                        android:scrollbars="vertical" />
+
+
+                </RelativeLayout>
+
+
+            </android.support.v7.widget.CardView>
+
+        </LinearLayout>
+
+
+
+    </android.support.v4.widget.NestedScrollView>
+
+
+</android.support.design.widget.CoordinatorLayout>
+
+
+
+
+
