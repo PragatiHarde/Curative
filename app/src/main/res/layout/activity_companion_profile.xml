@@ -110,6 +110,7 @@
                         android:layout_below="@id/com_profile_editbreed"
                         android:layout_toEndOf="@+id/com_profile_breed"
                         android:inputType="text"
+                        android:completionThreshold="1"
                         android:maxLines="1"/>
 
 
@@ -122,13 +123,15 @@
                         android:textColor="@color/colorSecondaryDark"
                         android:text="Blood grp::" />
 
-                    <EditText
+                    <AutoCompleteTextView
                         android:id="@+id/com_profile_editbloodgrp"
                         android:layout_width="@dimen/edittext_width2"
                         android:layout_height="@dimen/textview_height"
                         android:layout_alignEnd="@+id/com_profile_editbreed"
                         android:layout_alignParentEnd="true"
                         android:layout_below="@+id/com_profile_editbreed"
+                        android:completionThreshold="1"
+                        android:dropDownHeight="100sp"
                         android:inputType="text"
                         android:maxLines="1"/>
 
@@ -141,6 +144,7 @@
                         android:layout_height="@dimen/textview_height"
                         android:layout_alignParentStart="true"
                         android:textColor="@color/colorSecondaryDark"
+                        android:focusable="false"
                         android:text="DOB:"
                         />
 
@@ -223,7 +227,8 @@
                         android:layout_toEndOf="@+id/com_profile_editbreed"
                         android:background="@color/colorPrimaryLight"
                         android:text="..."
-                        android:textColor="@color/colorWhite" />
+                        android:textColor="@color/colorWhite"
+                        />
 
 
                 </RelativeLayout>
@@ -276,9 +281,9 @@
                         android:layout_centerHorizontal="true"
                         android:background="@color/colorbg_grey"
                         android:inputType="textMultiLine"
-                        android:lines="3"
-                        android:maxLines="7"
-                        android:scrollbarDefaultDelayBeforeFade="3000"
+                        android:lines="10"
+                        android:maxLines="15"
+                        android:scrollbarDefaultDelayBeforeFade="5000"
                         android:scrollbars="vertical" />
 
 
@@ -299,9 +304,9 @@
                         android:layout_below="@id/com_profile_notes"
                         android:background="@color/colorbg_grey"
                         android:inputType="textMultiLine"
-                        android:lines="5"
+                        android:lines="10"
                         android:maxLines="20"
-                        android:scrollbarDefaultDelayBeforeFade="3000"
+                        android:scrollbarDefaultDelayBeforeFade="5000"
                         android:scrollbars="vertical" />
 
 
